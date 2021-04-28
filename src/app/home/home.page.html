@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary" >
+    <ion-title>Henry's Temparature Converter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Celsius</ion-label>
+    <ion-input type="text" [(ngModel)]="temp.celsius" [ngModelOptions]="{standalone: true}" (keyup)="tempConvertFahrenheit()"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label floating>Fahrenheit</ion-label>
+    <ion-input type="text" [(ngModel)]="temp.fahrenheit" [ngModelOptions]="{standalone: true}" (keyup)="tempConvertCelsius()"></ion-input>
+  </ion-item>
+</ion-content>
